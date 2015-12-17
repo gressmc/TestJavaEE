@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+
+</h:head>
+<h:body>
+    <h:form>
+        <p:panel id="panel" header="User" style="margin-bottom:10px;">
+            <h:panelGrid columns="2">
+                <h:outputLabel value="Full  name" />
+                <p:inputText id="fullName" required="true" value="#{editPageBean.user.fullName}" />
+
+                <h:outputLabel value="Login" />
+                <p:inputText id="login" required="true" value="#{editPageBean.user.login}" />
+
+                <h:outputLabel value="Email"/>
+                <p:inputText id="emal" required="true" value="#{editPageBean.user.email}" />
+
+                <h:outputLabel value="Address" />
+                <p:inputText id="address" required="true" value="#{editPageBean.user.billingAddress}" />
+
+            </h:panelGrid>
+        </p:panel>
+        <h:commandButton value="Save" action="#{editPageBean.save}" />
+    </h:form>
+</h:body>
+</html>

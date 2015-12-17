@@ -1,0 +1,7 @@
+<Resource id="myDatabase" type="javax.sql.DataSource">
+    JdbcDriver oracle.jdbc.OracleDriver
+    JdbcUrl jdbc:oracle:thin:@127.0.0.1:1521/orcl
+    UserName MARKET
+    Password market
+    JtaManaged true
+</Resource>

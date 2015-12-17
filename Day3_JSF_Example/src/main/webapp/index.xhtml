@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+    <h:form prependId="false">
+        <h:outputText value="User list." />
+        <br/>
+        <h:commandButton value="Add user" action="#{indexPageBean.editUser(null)}"/>
+        <p:dataTable value="#{indexPageBean.user}" var="user">
+            <p:column headerText="Full Name">
+                <h:outputText value="#{user.fullName}"/>
+            </p:column>
+            <p:column headerText="Login">
+                <h:outputText value="#{user.login}"/>
+            </p:column>
+            <p:column headerText="Email">
+                <h:outputText value="#{user.email}"/>
+            </p:column>
+            <p:column headerText="Address">
+                <h:outputText value="#{user.billingAddress}"/>
+            </p:column>
+            <p:column headerText="Options">
+                <h:commandButton value="Edit" action="#{indexPageBean.editUser(user)}"/>
+                <h:commandButton value="Delete" action="#{indexPageBean.removeUser(user)}"/>
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+</html>
